@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test:unit": "jest --testMatch='**/features/**/*.test.ts'",
+    "test:integration": "jest --testMatch='**/integrations/*.integration.test.ts'",
+    "test:cov": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
