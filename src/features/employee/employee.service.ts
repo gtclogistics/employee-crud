@@ -24,4 +24,11 @@ export class EmployeeService {
         employee.role = role;
         return employee;
     }
+
+    deleteEmployee(id: string): void {
+        if (!id) throw new Error('ID cannot be empty');
+        const index = this.employees.findIndex(e => e.id === id);
+        if (index === -1) throw new Error('Employee not found');
+        this.employees.splice(index, 1);
+    }
 }
