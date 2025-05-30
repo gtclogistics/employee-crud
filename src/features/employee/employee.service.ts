@@ -10,4 +10,9 @@ export class EmployeeService {
         this.employees.push(employee);
         return employee;
     }
+
+    viewEmployee(id: string): Employee | undefined {
+        if(!id) throw new Error('ID cannot be empty');
+        return this.employees.find(e => e.id === id);
+    }
 }
