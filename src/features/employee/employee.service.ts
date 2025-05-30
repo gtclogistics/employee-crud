@@ -10,4 +10,8 @@ export class EmployeeService {
         this.employees.push(employee);
         return employee;
     }
+
+    viewEmployee(id: string): Employee | undefined {
+        return this.employees.find(e => e.id === id);
+    }
 }
