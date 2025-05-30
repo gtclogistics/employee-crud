@@ -12,7 +12,7 @@ export class EmployeeService {
     }
 
     viewEmployee(id: string): Employee | undefined {
-        if(!id) throw new Error('Id is required');
+        if(!id) throw new Error('ID cannot be empty');
         return this.employees.find(e => e.id === id);
     }
 }
