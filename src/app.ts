@@ -1,5 +1,6 @@
 import { AuthService } from './features/auth/auth.service';
 import { EmployeeService } from './features/employee/employee.service';
+import {Employee} from "./types";
 
 export class App {
     private authService: AuthService;
