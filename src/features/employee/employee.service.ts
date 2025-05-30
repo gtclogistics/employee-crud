@@ -12,6 +12,7 @@ export class EmployeeService {
     }
 
     viewEmployee(id: string): Employee | undefined {
+        if(!id) throw new Error('Id is required');
         return this.employees.find(e => e.id === id);
     }
 }
